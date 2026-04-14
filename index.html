@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamani Shalini A | Game Developer Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Loading Game World...</p>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Canvas for Three.js Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">KSA<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Kamani Shalini A">Kamani Shalini A</h1>
+                <h2 class="typing-container"><span id="typing-text"></span><span class="cursor">|</span></h2>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section hidden">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content glass-panel">
+                <div class="about-text">
+                    <p>Hello! I'm <strong>Kamani Shalini A</strong>, a passionate Game Developer and 3rd Year Computer Science student at SR University, Warangal.</p>
+                    <p>My journey in computer science is driven by a deep fascination with interactive storytelling and immersive experiences. I specialize in both 2D and 3D game design, constantly exploring new ways to push the boundaries of digital entertainment.</p>
+                    <p>Currently, I am honing my skills in industry-standard tools like Unity, Blender, and Three.js, aiming to craft memorable gaming experiences from concept to deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section hidden">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-container">
+                <!-- Game Dev -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-gamepad"></i> Game Development</h3>
+                    <div class="skill">
+                        <div class="skill-info"><span>Unity</span><span>90%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Unreal Engine (Basic)</span><span>40%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Three.js</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill">
+                        <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>C++</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Python</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Game Design -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-drafting-compass"></i> Game Design</h3>
+                    <div class="skill">
+                        <div class="skill-info"><span>Level Design</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>UI/UX for Games</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Storyboarding</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill">
+                        <div class="skill-info"><span>Blender</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Photoshop</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Git & GitHub</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section hidden">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-icon"><i class="fas fa-space-shuttle"></i></div>
+                    <h3>Space Dodger</h3>
+                    <p class="project-type">Minor 2D Game</p>
+                    <p class="project-desc">A 2D arcade game where the player avoids obstacles in space.</p>
+                    <div class="tech-stack">
+                        <span>HTML5 Canvas</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-small"><i class="fas fa-play"></i> Demo</a>
+                        <a href="#" class="btn-small outline"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-panel">
+                    <div class="project-icon"><i class="fas fa-dungeon"></i></div>
+                    <h3>Dungeon Escape</h3>
+                    <p class="project-type">Major 2D Game</p>
+                    <p class="project-desc">A complete 2D adventure game with levels, enemies, and scoring.</p>
+                    <div class="tech-stack">
+                        <span>Unity</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-small"><i class="fas fa-play"></i> Demo</a>
+                        <a href="#" class="btn-small outline"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-panel">
+                    <div class="project-icon"><i class="fas fa-cube"></i></div>
+                    <h3>3D Maze Explorer</h3>
+                    <p class="project-type">Minor 3D Game</p>
+                    <p class="project-desc">A simple 3D maze navigation game with interactive environments.</p>
+                    <div class="tech-stack">
+                        <span>Three.js</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-small"><i class="fas fa-play"></i> Demo</a>
+                        <a href="#" class="btn-small outline"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-panel">
+                    <div class="project-icon"><i class="fas fa-khanda"></i></div>
+                    <h3>Battle Arena 3D</h3>
+                    <p class="project-type">Major 3D Game</p>
+                    <p class="project-desc">A 3D multiplayer-style battle simulation with animations.</p>
+                    <div class="tech-stack">
+                        <span>Unity</span><span>Blender</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-small"><i class="fas fa-play"></i> Demo</a>
+                        <a href="#" class="btn-small outline"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section hidden">
+            <h2 class="section-title">Education & <span>Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - Present</div>
+                    <h3>BTech Computer Science</h3>
+                    <h4>SR University, Warangal</h4>
+                    <p>3rd Year Student focusing on Game Design and Development. Coursework includes Data Structures, Algorithms, Computer Graphics, and Software Engineering.</p>
+                </div>
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <h3>Game Development Intern</h3>
+                    <h4>Indie Game Studio</h4>
+                    <p>Assisted in level design and implemented core gameplay mechanics for an upcoming 2D platformer using Unity and C#.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section hidden">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info glass-panel">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly chat about games!</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kamani.shalini@example.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Warangal, Telangana, India</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-itch-io"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form glass-panel">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn w-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kamani Shalini A. Built with <i class="fas fa-heart" style="color: #ff0055;"></i> and Three.js</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="/js/threeScene.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
